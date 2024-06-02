@@ -14,12 +14,4 @@ students = [
 # Создание DataFrame из списка студентов
 df = pd.DataFrame(students)
 
-# Функция для сортировки студентов по предмету в зачетке
-def sort_students_by_subject(subject):
-    df_subject = df[df['зачетка'].apply(lambda x: any(d['предмет'] == subject for d in x))]
-    sorted_df = df_subject.sort_values(by='фамилия')
-    return sorted_df
 
-# Вывод таблицы ФИО и даты рождения отсортированных студентов
-sorted_students = sort_students_by_subject("Математика")
-print(sorted_students[['фамилия', 'имя', 'дата_рождения']])
