@@ -4,11 +4,21 @@ import random
 
 # Функция для заполнения массива случайными значениями
 def fill_array(rows, cols):
-    arr = []
-    for i in range(rows):
-        row = []
-        for j in range(cols):
-            row.append(random.randint(0, 10))  # Генерируем случайное число от 0 до 10
-        arr.append(row)
-    return arr
+arr = []
+for i in range(rows):
+row = []
+for j in range(cols):
+row.append(random.randint(0, 10)) # Генерируем случайное число от 0 до 10
+arr.append(row)
+return arr
 
+# Функция для вывода массива на экран
+def print_array(arr):
+for row in arr:
+print(row)
+
+# Пример использования функций
+rows = 3
+cols = 3
+my_array = fill_array(rows, cols)
+print_array(my_array)
