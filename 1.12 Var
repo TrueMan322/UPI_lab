@@ -12,13 +12,3 @@ def fill_array(rows, cols):
         arr.append(row)
     return arr
 
-# Функция для вывода массива на экран
-def print_array(arr):
-    for row in arr:
-        print(row)
-
-# Пример использования функций
-rows = 3
-cols = 3
-my_array = fill_array(rows, cols)
-print_array(my_array)
